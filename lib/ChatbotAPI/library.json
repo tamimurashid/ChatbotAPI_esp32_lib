@@ -1,0 +1,15 @@
+{
+  "name": "ChatbotAPI",
+  "version": "1.0.0",
+  "description": "Simple library for device to communicate with Chatbot server",
+  "keywords": ["chatbot", "api", "iot", "http"],
+  "authors": [
+    {
+      "name": "Tamimu Rashid",
+      "email": "rashidytamimu@example.com"
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": "espressif32",
+  "license": "MIT"
+}
