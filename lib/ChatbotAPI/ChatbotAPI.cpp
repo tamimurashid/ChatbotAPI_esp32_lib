@@ -1,7 +1,8 @@
 #include "ChatbotAPI.h"
 
-ChatbotAPI::ChatbotAPI(String url) {
-    base_url = url;
+// Define the empty constructor
+ChatbotAPI::ChatbotAPI() {
+    // No action required
 }
 
 void ChatbotAPI::begin(String id, String token) {
@@ -11,10 +12,10 @@ void ChatbotAPI::begin(String id, String token) {
 
 String ChatbotAPI::updateData(String pin, String value) {
     HTTPClient http;
-    http.begin(base_url + "/api/device/update");
+    http.begin("http://192.168.10.103:5000/api/device/update");
     http.addHeader("Content-Type", "application/json");
 
-    StaticJsonDocument<256> jsonDoc;
+    StaticJsonDocument<256> jsonDoc;  // You can still use StaticJsonDocument as it's safer on embedded
     jsonDoc["device_id"] = device_id;
     jsonDoc["auth_token"] = auth_token;
     jsonDoc["virtualPin"] = pin;

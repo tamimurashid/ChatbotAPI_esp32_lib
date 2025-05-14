@@ -8,7 +8,7 @@ const char* auth_token = "ba689c446d67cc99c68e60478392a59b";
 const char* ssid = "Reindeer";
 const char* password = "200120022003";
 
-ChatbotAPI chatbot("http://192.168.10.103:5000");
+ChatbotAPI chatbot;
 
 void setup() {
   Serial.begin(115200);
